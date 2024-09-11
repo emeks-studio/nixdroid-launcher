@@ -15,3 +15,13 @@ nix develop
 # available on x86_64-linux platforms
 android-studio
 ```
+
+Misc:
+
+```bash
+# generate the android sdk
+nix build .#android-sdk
+
+# use the emulator (is throwing an error) FIXME!
+./result/bin/emulator -list-avds
+```
