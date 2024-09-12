@@ -22,6 +22,15 @@ Misc:
 # generate the android sdk
 nix build .#android-sdk
 
-# use the emulator (is throwing an error) FIXME!
-./result/bin/emulator -list-avds
+# list available packages
+sdkmanager --list_installed
+
+# create virtual device
+avdmanager create avd -n my_avd -k "system-images;android-35;google_apis;x86_64"
+
+# use the emulator 
+emulator -list-avds
+
+# run the emulator 
+emulator -avd my_avd
 ```
