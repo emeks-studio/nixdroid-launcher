@@ -15,3 +15,5 @@ result/
 .externalNativeBuild
 .cxx
 local.properties
+result
+result-*

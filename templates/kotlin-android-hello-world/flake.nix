@@ -1,5 +1,5 @@
 {
-  description = "My Android project";
+  description = "A Kotlin Android project";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs";
