@@ -2,7 +2,7 @@
 
 ## Genesis
 
-This repo was initilized with the following command:
+This repo was initialized with the following command:
 
 ```bash
 nix flake init -t github:tadfisher/android-nixpkgs
@@ -10,18 +10,18 @@ nix flake init -t github:tadfisher/android-nixpkgs
 
 ## Development
 
+Running android studio:
 ```bash
 nix develop
 # available on x86_64-linux platforms
 android-studio
 ```
 
-Misc:
+### Troubleshooting
+
+(optional) Before running the app using android-studio, make sure you have a virtual device created and running. 
 
 ```bash
-# generate the android sdk
-nix build .#android-sdk
-
 # list available packages
 sdkmanager --list_installed
 
@@ -33,4 +33,12 @@ emulator -list-avds
 
 # run the emulator 
 emulator -avd my_avd
+```
+
+### Misc
+
+Build android studio
+
+```bash
+nix build .#android-sdk
 ```

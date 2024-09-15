@@ -32,10 +32,13 @@
           android-sdk = android.sdk.${system} (sdkPkgs: with sdkPkgs; [
             # Useful packages for building and testing.
             build-tools-35-0-0
+            build-tools-34-0-0
+
             cmdline-tools-latest
             emulator
             platform-tools
             platforms-android-35
+            platforms-android-34
 
             # Other useful packages for a development environment.
             # ndk-26-1-10909125
@@ -47,6 +50,7 @@
             # system-images-android-35-google-apis-playstore-arm64-v8a
           ]
           ++ lib.optionals (system == "x86_64-darwin" || system == "x86_64-linux") [
+            system-images-android-34-google-apis-x86-64
             system-images-android-35-google-apis-x86-64
             # system-images-android-35-google-apis-playstore-x86-64
           ]);
